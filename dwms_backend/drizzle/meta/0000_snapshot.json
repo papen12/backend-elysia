@@ -1,0 +1,3826 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "5",
+  "dialect": "mysql",
+  "tables": {
+    "accounts": {
+      "name": "accounts",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vida_util": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "vida_util",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "depreciar": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "depreciar",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "actualizar": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "actualizar",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'''1'''",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "api_tokens": {
+      "name": "api_tokens",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "autoincrement": false,
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nombre": {
+          "autoincrement": false,
+          "name": "nombre",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "token": {
+          "autoincrement": false,
+          "name": "token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fecha_expiracion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha_expiracion",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "assets": {
+      "name": "assets",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "auxiliary_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "auxiliary_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "account_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "account_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "barcode": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "barcode",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "state",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "observation": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "observation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "proceso": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "proceso",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "observaciones": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "observaciones",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "precio": {
+          "default": "'0.00'",
+          "autoincrement": false,
+          "name": "precio",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "detalle": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "detalle",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "medidas": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "medidas",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "material": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "material",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "color": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "color",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "marca": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "marca",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "modelo": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "modelo",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "serie": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "serie",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code_old": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code_old",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ingreso_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ingreso_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ubicacion_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ubicacion_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "baja_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "baja_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "asset_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "asset_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_assets_on_auxiliary_id": {
+          "name": "index_assets_on_auxiliary_id",
+          "columns": [
+            "auxiliary_id"
+          ],
+          "isUnique": false
+        },
+        "index_assets_on_user_id": {
+          "name": "index_assets_on_user_id",
+          "columns": [
+            "user_id"
+          ],
+          "isUnique": false
+        },
+        "index_assets_on_account_id": {
+          "name": "index_assets_on_account_id",
+          "columns": [
+            "account_id"
+          ],
+          "isUnique": false
+        },
+        "index_assets_on_ingreso_id": {
+          "name": "index_assets_on_ingreso_id",
+          "columns": [
+            "ingreso_id"
+          ],
+          "isUnique": false
+        },
+        "index_assets_on_ubicacion_id": {
+          "name": "index_assets_on_ubicacion_id",
+          "columns": [
+            "ubicacion_id"
+          ],
+          "isUnique": false
+        },
+        "index_assets_on_baja_id": {
+          "name": "index_assets_on_baja_id",
+          "columns": [
+            "baja_id"
+          ],
+          "isUnique": false
+        },
+        "index_assets_on_asset_id": {
+          "name": "index_assets_on_asset_id",
+          "columns": [
+            "asset_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_17984c4e2f": {
+          "name": "fk_rails_17984c4e2f",
+          "tableFrom": "assets",
+          "tableTo": "bajas",
+          "columnsFrom": [
+            "baja_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_590236dc2e": {
+          "name": "fk_rails_590236dc2e",
+          "tableFrom": "assets",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_61e74d4630": {
+          "name": "fk_rails_61e74d4630",
+          "tableFrom": "assets",
+          "tableTo": "ubicaciones",
+          "columnsFrom": [
+            "ubicacion_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_823c31e179": {
+          "name": "fk_rails_823c31e179",
+          "tableFrom": "assets",
+          "tableTo": "ingresos",
+          "columnsFrom": [
+            "ingreso_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_fad3a5ab3c": {
+          "name": "fk_rails_fad3a5ab3c",
+          "tableFrom": "assets",
+          "tableTo": "auxiliaries",
+          "columnsFrom": [
+            "auxiliary_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "assets_seguros": {
+      "name": "assets_seguros",
+      "columns": {
+        "asset_id": {
+          "autoincrement": false,
+          "name": "asset_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "seguro_id": {
+          "autoincrement": false,
+          "name": "seguro_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_assets_seguros_on_asset_id_and_seguro_id": {
+          "name": "index_assets_seguros_on_asset_id_and_seguro_id",
+          "columns": [
+            "asset_id",
+            "seguro_id"
+          ],
+          "isUnique": false
+        },
+        "index_assets_seguros_on_seguro_id_and_asset_id": {
+          "name": "index_assets_seguros_on_seguro_id_and_asset_id",
+          "columns": [
+            "seguro_id",
+            "asset_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_0357afe86a": {
+          "name": "fk_rails_0357afe86a",
+          "tableFrom": "assets_seguros",
+          "tableTo": "assets",
+          "columnsFrom": [
+            "asset_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_13cf7e4e44": {
+          "name": "fk_rails_13cf7e4e44",
+          "tableFrom": "assets_seguros",
+          "tableTo": "seguros",
+          "columnsFrom": [
+            "seguro_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "asset_proceedings": {
+      "name": "asset_proceedings",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "proceeding_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "proceeding_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "asset_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "asset_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_asset_proceedings_on_proceeding_id": {
+          "name": "index_asset_proceedings_on_proceeding_id",
+          "columns": [
+            "proceeding_id"
+          ],
+          "isUnique": false
+        },
+        "index_asset_proceedings_on_asset_id": {
+          "name": "index_asset_proceedings_on_asset_id",
+          "columns": [
+            "asset_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_574cdc3eb5": {
+          "name": "fk_rails_574cdc3eb5",
+          "tableFrom": "asset_proceedings",
+          "tableTo": "proceedings",
+          "columnsFrom": [
+            "proceeding_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_dc06661115": {
+          "name": "fk_rails_dc06661115",
+          "tableFrom": "asset_proceedings",
+          "tableTo": "assets",
+          "columnsFrom": [
+            "asset_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "auxiliaries": {
+      "name": "auxiliaries",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "account_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "account_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_auxiliaries_on_account_id": {
+          "name": "index_auxiliaries_on_account_id",
+          "columns": [
+            "account_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_96e19d2f9b": {
+          "name": "fk_rails_96e19d2f9b",
+          "tableFrom": "auxiliaries",
+          "tableTo": "accounts",
+          "columnsFrom": [
+            "account_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "bajas": {
+      "name": "bajas",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "numero": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "numero",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documento": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "documento",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "observacion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "observacion",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "motivo": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "motivo",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fecha_documento": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha_documento",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documento_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "documento_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documento_cite": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "documento_cite",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_bajas_on_user_id": {
+          "name": "index_bajas_on_user_id",
+          "columns": [
+            "user_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_1e8045912f": {
+          "name": "fk_rails_1e8045912f",
+          "tableFrom": "bajas",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "buildings": {
+      "name": "buildings",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "entity_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "entity_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_buildings_on_entity_id": {
+          "name": "index_buildings_on_entity_id",
+          "columns": [
+            "entity_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_b2c90e921c": {
+          "name": "fk_rails_b2c90e921c",
+          "tableFrom": "buildings",
+          "tableTo": "entities",
+          "columnsFrom": [
+            "entity_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {
+        "index_buildings_on_code": {
+          "name": "index_buildings_on_code",
+          "columns": [
+            "code"
+          ]
+        }
+      },
+      "checkConstraint": {}
+    },
+    "cierre_gestiones": {
+      "name": "cierre_gestiones",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "actualizacion_gestion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "actualizacion_gestion",
+          "type": "decimal(19,6)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "depreciacion_gestion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "depreciacion_gestion",
+          "type": "decimal(19,6)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "indice_ufv": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "indice_ufv",
+          "type": "decimal(6,5)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "asset_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "asset_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gestion_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "gestion_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_cierre_gestiones_on_asset_id": {
+          "name": "index_cierre_gestiones_on_asset_id",
+          "columns": [
+            "asset_id"
+          ],
+          "isUnique": false
+        },
+        "index_cierre_gestiones_on_gestion_id": {
+          "name": "index_cierre_gestiones_on_gestion_id",
+          "columns": [
+            "gestion_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_8d61ed6000": {
+          "name": "fk_rails_8d61ed6000",
+          "tableFrom": "cierre_gestiones",
+          "tableTo": "gestiones",
+          "columnsFrom": [
+            "gestion_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_c238942fca": {
+          "name": "fk_rails_c238942fca",
+          "tableFrom": "cierre_gestiones",
+          "tableTo": "assets",
+          "columnsFrom": [
+            "asset_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "departments": {
+      "name": "departments",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "building_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "building_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_departments_on_building_id": {
+          "name": "index_departments_on_building_id",
+          "columns": [
+            "building_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_0381a2097b": {
+          "name": "fk_rails_0381a2097b",
+          "tableFrom": "departments",
+          "tableTo": "buildings",
+          "columnsFrom": [
+            "building_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "entities": {
+      "name": "entities",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "acronym": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "acronym",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "header": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "header",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "footer": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "footer",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "entry_subarticles": {
+      "name": "entry_subarticles",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "amount": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "amount",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unit_cost": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "unit_cost",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_cost": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total_cost",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invoice": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "invoice",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "date": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subarticle_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "subarticle_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stock": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "stock",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "note_entry_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "note_entry_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invalidate": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "invalidate",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_entry_subarticles_on_subarticle_id": {
+          "name": "index_entry_subarticles_on_subarticle_id",
+          "columns": [
+            "subarticle_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_589b865ebe": {
+          "name": "fk_rails_589b865ebe",
+          "tableFrom": "entry_subarticles",
+          "tableTo": "subarticles",
+          "columnsFrom": [
+            "subarticle_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_ee711e9361": {
+          "name": "fk_rails_ee711e9361",
+          "tableFrom": "entry_subarticles",
+          "tableTo": "note_entries",
+          "columnsFrom": [
+            "note_entry_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "gestiones": {
+      "name": "gestiones",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "anio": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "anio",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cerrado": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "cerrado",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fecha_cierre": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha_cierre",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_gestiones_on_user_id": {
+          "name": "index_gestiones_on_user_id",
+          "columns": [
+            "user_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_f5016c1841": {
+          "name": "fk_rails_f5016c1841",
+          "tableFrom": "gestiones",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "ingresos": {
+      "name": "ingresos",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "numero": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "numero",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nota_entrega_fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nota_entrega_fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "factura_numero": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "factura_numero",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "factura_autorizacion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "factura_autorizacion",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "factura_fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "factura_fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "supplier_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "supplier_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "c31_numero": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "c31_numero",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "baja_logica": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "baja_logica",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nota_entrega_numero": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nota_entrega_numero",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "c31_fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "c31_fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "incremento_alfabetico": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "incremento_alfabetico",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "observacion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "observacion",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documento_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "documento_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documento_cite": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "documento_cite",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tipo_ingreso": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tipo_ingreso",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "entidad_donante": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "entidad_donante",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_ingresos_on_supplier_id": {
+          "name": "index_ingresos_on_supplier_id",
+          "columns": [
+            "supplier_id"
+          ],
+          "isUnique": false
+        },
+        "index_ingresos_on_user_id": {
+          "name": "index_ingresos_on_user_id",
+          "columns": [
+            "user_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_19226c190b": {
+          "name": "fk_rails_19226c190b",
+          "tableFrom": "ingresos",
+          "tableTo": "suppliers",
+          "columnsFrom": [
+            "supplier_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_ade1ffe7d1": {
+          "name": "fk_rails_ade1ffe7d1",
+          "tableFrom": "ingresos",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "materials": {
+      "name": "materials",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "description",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(2)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "note_entries": {
+      "name": "note_entries",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "delivery_note_number": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "delivery_note_number",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "delivery_note_date": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "delivery_note_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invoice_number": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "invoice_number",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invoice_date": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "invoice_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "supplier_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "supplier_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "note_entry_date": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "note_entry_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invalidate": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "invalidate",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "message": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "message",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invoice_autorizacion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "invoice_autorizacion",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "c31": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "c31",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nro_nota_ingreso": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "nro_nota_ingreso",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subtotal": {
+          "default": "'0.00'",
+          "autoincrement": false,
+          "name": "subtotal",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "descuento": {
+          "default": "'0.00'",
+          "autoincrement": false,
+          "name": "descuento",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "incremento_alfabetico": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "incremento_alfabetico",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "observacion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "observacion",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "c31_fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "c31_fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "reingreso": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "reingreso",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "documento_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "documento_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "json_usuarios": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "json_usuarios",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documento_cite": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "documento_cite",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tipo_ingreso": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tipo_ingreso",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "entidad_donante": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "entidad_donante",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_note_entries_on_supplier_id": {
+          "name": "index_note_entries_on_supplier_id",
+          "columns": [
+            "supplier_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_ad8862a094": {
+          "name": "fk_rails_ad8862a094",
+          "tableFrom": "note_entries",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_c41185cb6f": {
+          "name": "fk_rails_c41185cb6f",
+          "tableFrom": "note_entries",
+          "tableTo": "suppliers",
+          "columnsFrom": [
+            "supplier_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "proceedings": {
+      "name": "proceedings",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "admin_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "admin_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "proceeding_type": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "proceeding_type",
+          "type": "varchar(2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "baja_logica": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "baja_logica",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "observaciones": {
+          "default": "'''Ninguno'''",
+          "autoincrement": false,
+          "name": "observaciones",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "usuario_info": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "usuario_info",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "plantillas_info": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "plantillas_info",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_proceedings_on_user_id": {
+          "name": "index_proceedings_on_user_id",
+          "columns": [
+            "user_id"
+          ],
+          "isUnique": false
+        },
+        "index_proceedings_on_admin_id": {
+          "name": "index_proceedings_on_admin_id",
+          "columns": [
+            "admin_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_3e0f21ce0b": {
+          "name": "fk_rails_3e0f21ce0b",
+          "tableFrom": "proceedings",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_47fac28a6c": {
+          "name": "fk_rails_47fac28a6c",
+          "tableFrom": "proceedings",
+          "tableTo": "users",
+          "columnsFrom": [
+            "admin_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "requests": {
+      "name": "requests",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "admin_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "admin_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'''0'''",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "delivery_date": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "delivery_date",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invalidate": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "invalidate",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "message": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "message",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nro_solicitud": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "nro_solicitud",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "incremento_alfabetico": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "incremento_alfabetico",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "observacion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "observacion",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documento_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "documento_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "json_usuarios": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "json_usuarios",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cite_sms": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cite_sms",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cite_ems": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cite_ems",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "fk_rails_8ead8b1e6b": {
+          "name": "fk_rails_8ead8b1e6b",
+          "tableFrom": "requests",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_c38a214881": {
+          "name": "fk_rails_c38a214881",
+          "tableFrom": "requests",
+          "tableTo": "users",
+          "columnsFrom": [
+            "admin_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "schema_migrations": {
+      "name": "schema_migrations",
+      "columns": {
+        "version": {
+          "autoincrement": false,
+          "name": "version",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {
+        "unique_schema_migrations": {
+          "name": "unique_schema_migrations",
+          "columns": [
+            "version"
+          ]
+        }
+      },
+      "checkConstraint": {}
+    },
+    "seguros": {
+      "name": "seguros",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "supplier_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "supplier_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "numero_poliza": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "numero_poliza",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "numero_contrato": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "numero_contrato",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "factura_numero": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "factura_numero",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "factura_autorizacion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "factura_autorizacion",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "factura_fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "factura_fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "factura_monto": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "factura_monto",
+          "type": "double",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fecha_inicio_vigencia": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha_inicio_vigencia",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fecha_fin_vigencia": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha_fin_vigencia",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "baja_logica": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "baja_logica",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "seguro_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "seguro_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "state",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tipo": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tipo",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_seguros_on_seguro_id": {
+          "name": "index_seguros_on_seguro_id",
+          "columns": [
+            "seguro_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_7cf708c516": {
+          "name": "fk_rails_7cf708c516",
+          "tableFrom": "seguros",
+          "tableTo": "suppliers",
+          "columnsFrom": [
+            "supplier_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_8466f2fe6f": {
+          "name": "fk_rails_8466f2fe6f",
+          "tableFrom": "seguros",
+          "tableTo": "seguros",
+          "columnsFrom": [
+            "seguro_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_fbfcdaa8db": {
+          "name": "fk_rails_fbfcdaa8db",
+          "tableFrom": "seguros",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "subarticles": {
+      "name": "subarticles",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "description",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unit": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "unit",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "article_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "article_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "amount",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "minimum": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "minimum",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "barcode": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "barcode",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code_old": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code_old",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "incremento": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "incremento",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "material_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "material_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_subarticles_on_article_id": {
+          "name": "index_subarticles_on_article_id",
+          "columns": [
+            "article_id"
+          ],
+          "isUnique": false
+        },
+        "index_subarticles_on_material_id": {
+          "name": "index_subarticles_on_material_id",
+          "columns": [
+            "material_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_6fe93e487e": {
+          "name": "fk_rails_6fe93e487e",
+          "tableFrom": "subarticles",
+          "tableTo": "materials",
+          "columnsFrom": [
+            "material_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "subarticle_requests": {
+      "name": "subarticle_requests",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "subarticle_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "subarticle_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "request_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "request_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "amount",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount_delivered": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "amount_delivered",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_delivered": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total_delivered",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invalidate": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "invalidate",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_subarticle_requests_on_request_id": {
+          "name": "index_subarticle_requests_on_request_id",
+          "columns": [
+            "request_id"
+          ],
+          "isUnique": false
+        },
+        "index_subarticle_requests_on_subarticle_id": {
+          "name": "index_subarticle_requests_on_subarticle_id",
+          "columns": [
+            "subarticle_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "fk_rails_67ff6e617c": {
+          "name": "fk_rails_67ff6e617c",
+          "tableFrom": "subarticle_requests",
+          "tableTo": "subarticles",
+          "columnsFrom": [
+            "subarticle_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        },
+        "fk_rails_d89d70fde4": {
+          "name": "fk_rails_d89d70fde4",
+          "tableFrom": "subarticle_requests",
+          "tableTo": "requests",
+          "columnsFrom": [
+            "request_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "restrict"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "suppliers": {
+      "name": "suppliers",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nit": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nit",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "telefono": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "telefono",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contacto": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "contacto",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "t_temporal_pedidos": {
+      "name": "t_temporal_pedidos",
+      "columns": {
+        "id_transaccion": {
+          "autoincrement": true,
+          "name": "id_transaccion",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id_usuario": {
+          "autoincrement": false,
+          "name": "id_usuario",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code_item": {
+          "autoincrement": false,
+          "name": "code_item",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description_item": {
+          "autoincrement": false,
+          "name": "description_item",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "unit_item": {
+          "autoincrement": false,
+          "name": "unit_item",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cantidad_item": {
+          "autoincrement": false,
+          "name": "cantidad_item",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "stock_item": {
+          "autoincrement": false,
+          "name": "stock_item",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pedido_temp_date": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "pedido_temp_date",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "ubicaciones": {
+      "name": "ubicaciones",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "abreviacion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "abreviacion",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "descripcion": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "descripcion",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "ufvs": {
+      "name": "ufvs",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "valor": {
+          "default": "'0.00000'",
+          "autoincrement": false,
+          "name": "valor",
+          "type": "decimal(7,5)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "users": {
+      "name": "users",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "encrypted_password": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "encrypted_password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reset_password_token": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "reset_password_token",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "reset_password_sent_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "reset_password_sent_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "remember_created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "remember_created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sign_in_count": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "sign_in_count",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "current_sign_in_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "current_sign_in_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_sign_in_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "last_sign_in_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "current_sign_in_ip": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "current_sign_in_ip",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_sign_in_ip": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "last_sign_in_ip",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "username": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "username",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "title": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "title",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ci": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ci",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phone": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "phone",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mobile": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "mobile",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "department_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "department_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "role": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "role",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password_change": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "password_change",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "assets_count": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "assets_count",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_users_on_email": {
+          "name": "index_users_on_email",
+          "columns": [
+            "email"
+          ],
+          "isUnique": false
+        },
+        "index_users_on_username": {
+          "name": "index_users_on_username",
+          "columns": [
+            "username"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "uniqueConstraints": {
+        "index_users_on_reset_password_token": {
+          "name": "index_users_on_reset_password_token",
+          "columns": [
+            "reset_password_token"
+          ]
+        }
+      },
+      "checkConstraint": {}
+    },
+    "versions": {
+      "name": "versions",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "item_type": {
+          "autoincrement": false,
+          "name": "item_type",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "item_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "item_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "event": {
+          "autoincrement": false,
+          "name": "event",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "whodunnit": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "whodunnit",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "object": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "object",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "active": {
+          "default": 1,
+          "autoincrement": false,
+          "name": "active",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "item_spanish": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "item_spanish",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "index_versions_on_item_type_and_item_id": {
+          "name": "index_versions_on_item_type_and_item_id",
+          "columns": [
+            "item_type",
+            "item_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    }
+  },
+  "views": {
+    "entradas_salidas": {
+      "columns": {
+        "id": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "subarticle_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "subarticle_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fecha": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fecha",
+          "type": "datetime /* mariadb-5.3 */",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "factura": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "factura",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nota_entrega": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nota_entrega",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nro_pedido": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nro_pedido",
+          "type": "varchar(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "detalle": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "detalle",
+          "type": "varchar(463)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cantidad": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cantidad",
+          "type": "decimal(12,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "costo_unitario": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "costo_unitario",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "modelo_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "modelo_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tipo": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "tipo",
+          "type": "varchar(7)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime /* mariadb-5.3 */",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cite_ems_plantillas": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cite_ems_plantillas",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "isExisting": false,
+      "name": "entradas_salidas",
+      "algorithm": "undefined",
+      "definition": "select `es`.`id` AS `id`,`es`.`subarticle_id` AS `subarticle_id`,`r`.`delivery_date` AS `fecha`,'' AS `factura`,cast(NULL as date) AS `nota_entrega`,`r`.`nro_solicitud` AS `nro_pedido`,concat(`u`.`name`,' - ',`u`.`title`) AS `detalle`,-`es`.`total_delivered` AS `cantidad`,0 AS `costo_unitario`,`es`.`request_id` AS `modelo_id`,'salida' AS `tipo`,`r`.`created_at` AS `created_at`,`r`.`cite_ems` AS `cite_ems_plantillas` from ((`dwms_bd`.`requests` `r` join `dwms_bd`.`subarticle_requests` `es` on(`r`.`id` = `es`.`request_id`)) join `dwms_bd`.`users` `u` on(`r`.`user_id` = `u`.`id`)) where `r`.`invalidate` = 0 and `es`.`invalidate` = 0 and `r`.`status` = 'delivered' union select `es`.`id` AS `id`,`es`.`subarticle_id` AS `subarticle_id`,ifnull(`ne`.`note_entry_date`,`es`.`date`) AS `fecha`,`ne`.`invoice_number` AS `factura`,`ne`.`delivery_note_date` AS `nota_entrega`,'' AS `nro_pedido`,if(`ne`.`supplier_id`,(select `s`.`name` from `dwms_bd`.`suppliers` `s` where `s`.`id` = `ne`.`supplier_id`),if(`ne`.`reingreso` = 1,'REINGRESO',if(`ne`.`tipo_ingreso` = 'donacion_transferencia','DONACION O TRANSFERENCIA','SALDO INICIAL'))) AS `detalle`,`es`.`amount` AS `cantidad`,`es`.`unit_cost` AS `costo_unitario`,`es`.`note_entry_id` AS `modelo_id`,'entrada' AS `tipo`,`es`.`created_at` AS `created_at`,`ne`.`documento_cite` AS `cite_ems_plantillas` from (`dwms_bd`.`entry_subarticles` `es` left join `dwms_bd`.`note_entries` `ne` on(`es`.`note_entry_id` = `ne`.`id`)) where `es`.`invalidate` = 0 order by `subarticle_id`,`fecha`,`id`,`cantidad` desc,`created_at`",
+      "sqlSecurity": "definer"
+    },
+    "master_ingreso": {
+      "columns": {
+        "code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "description",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unit": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "unit",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "article_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "article_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "amount",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "minimum": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "minimum",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "barcode": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "barcode",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "material_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "material_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code_old": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code_old",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "incremento": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "incremento",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code_materials": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "code_materials",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "descrition_material": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "descrition_material",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status_material": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status_material",
+          "type": "varchar(2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount_sub": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "amount_sub",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unit_cost": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "unit_cost",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_cost": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total_cost",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invoice": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "invoice",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "date": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subarticle_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "subarticle_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "create_entry": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "create_entry",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stock": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "stock",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "note_entry_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "note_entry_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "invalidate": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "invalidate",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "isExisting": false,
+      "name": "master_ingreso",
+      "algorithm": "undefined",
+      "definition": "select `dwms_bd`.`subarticles`.`code` AS `code`,`dwms_bd`.`subarticles`.`description` AS `description`,`dwms_bd`.`subarticles`.`unit` AS `unit`,`dwms_bd`.`subarticles`.`status` AS `status`,`dwms_bd`.`subarticles`.`article_id` AS `article_id`,`dwms_bd`.`subarticles`.`created_at` AS `created_at`,`dwms_bd`.`subarticles`.`updated_at` AS `updated_at`,`dwms_bd`.`subarticles`.`amount` AS `amount`,`dwms_bd`.`subarticles`.`minimum` AS `minimum`,`dwms_bd`.`subarticles`.`barcode` AS `barcode`,`dwms_bd`.`subarticles`.`material_id` AS `material_id`,`dwms_bd`.`subarticles`.`code_old` AS `code_old`,`dwms_bd`.`subarticles`.`incremento` AS `incremento`,`dwms_bd`.`materials`.`code` AS `code_materials`,`dwms_bd`.`materials`.`description` AS `descrition_material`,`dwms_bd`.`materials`.`status` AS `status_material`,`dwms_bd`.`entry_subarticles`.`amount` AS `amount_sub`,`dwms_bd`.`entry_subarticles`.`unit_cost` AS `unit_cost`,`dwms_bd`.`entry_subarticles`.`total_cost` AS `total_cost`,`dwms_bd`.`entry_subarticles`.`invoice` AS `invoice`,`dwms_bd`.`entry_subarticles`.`date` AS `date`,`dwms_bd`.`entry_subarticles`.`subarticle_id` AS `subarticle_id`,`dwms_bd`.`entry_subarticles`.`created_at` AS `create_entry`,`dwms_bd`.`entry_subarticles`.`stock` AS `stock`,`dwms_bd`.`entry_subarticles`.`note_entry_id` AS `note_entry_id`,`dwms_bd`.`entry_subarticles`.`invalidate` AS `invalidate` from ((`dwms_bd`.`subarticles` join `dwms_bd`.`materials` on(`dwms_bd`.`materials`.`id` = `dwms_bd`.`subarticles`.`material_id`)) join `dwms_bd`.`entry_subarticles` on(`dwms_bd`.`entry_subarticles`.`subarticle_id` = `dwms_bd`.`subarticles`.`id`)) where `dwms_bd`.`entry_subarticles`.`stock` > 0 order by `dwms_bd`.`subarticles`.`description`",
+      "sqlSecurity": "definer"
+    },
+    "pedidos_temporales": {
+      "columns": {
+        "code_item": {
+          "autoincrement": false,
+          "name": "code_item",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "totalReservas": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "totalReservas",
+          "type": "decimal(32,0)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "isExisting": false,
+      "name": "pedidos_temporales",
+      "algorithm": "undefined",
+      "definition": "select `dwms_bd`.`t_temporal_pedidos`.`code_item` AS `code_item`,sum(`dwms_bd`.`t_temporal_pedidos`.`cantidad_item`) AS `totalReservas` from `dwms_bd`.`t_temporal_pedidos` group by `dwms_bd`.`t_temporal_pedidos`.`code_item`",
+      "sqlSecurity": "definer"
+    },
+    "usersjson1": {
+      "columns": {
+        "id": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nombre": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nombre",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "numero_documento": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "numero_documento",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cargo": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cargo",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "department_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "department_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unidad": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "unidad",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_departament": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "id_departament",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "isExisting": false,
+      "name": "usersjson1",
+      "algorithm": "undefined",
+      "definition": "select `dwms_bd`.`users`.`id` AS `id`,`dwms_bd`.`users`.`name` AS `nombre`,`dwms_bd`.`users`.`ci` AS `numero_documento`,`dwms_bd`.`users`.`title` AS `cargo`,`dwms_bd`.`users`.`department_id` AS `department_id`,`dwms_bd`.`departments`.`name` AS `unidad`,`dwms_bd`.`departments`.`id` AS `id_departament`,`dwms_bd`.`users`.`email` AS `email` from (`dwms_bd`.`users` join `dwms_bd`.`departments` on(`dwms_bd`.`departments`.`code` = `dwms_bd`.`users`.`department_id`))",
+      "sqlSecurity": "definer"
+    },
+    "user_json": {
+      "columns": {
+        "id": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nombre": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nombre",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "numero_documento": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "numero_documento",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cargo": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cargo",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "department_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "department_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unidad": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "unidad",
+          "type": "varchar(230)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_departament": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "id_departament",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "default": "''''''",
+          "autoincrement": false,
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "isExisting": false,
+      "name": "user_json",
+      "algorithm": "undefined",
+      "definition": "select `dwms_bd`.`users`.`id` AS `id`,`dwms_bd`.`users`.`name` AS `nombre`,`dwms_bd`.`users`.`ci` AS `numero_documento`,`dwms_bd`.`users`.`title` AS `cargo`,`dwms_bd`.`users`.`department_id` AS `department_id`,`dwms_bd`.`departments`.`name` AS `unidad`,`dwms_bd`.`departments`.`id` AS `id_departament`,`dwms_bd`.`users`.`email` AS `email` from (`dwms_bd`.`users` join `dwms_bd`.`departments` on(`dwms_bd`.`departments`.`id` = `dwms_bd`.`users`.`department_id`))",
+      "sqlSecurity": "definer"
+    }
+  },
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {},
+    "indexes": {}
+  }
+}
